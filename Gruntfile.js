@@ -589,18 +589,37 @@ module.exports = function(grunt) {
 	    // Test tasks
     	// @todo get test package install working on build server
     	phantomcss: {
-    		options: {},
     		desktop: {
     			options: {
-    				screenshots: 'test/src/screenshots/',
-    				results: 'test/results/visual/'
+    				screenshots: 'test/src/screenshots/desktop/',
+    				results: 'test/results/desktop',
+    				viewportSize: [1440, 900]
+    			},
+    			src: [
+    			'test/src/**/*.js'
+    			]
+    		},
+    		tablet: {
+    			options: {
+    				screenshots: 'test/src/screenshots/tablet/',
+    				results: 'test/results/tablet',
+    				viewportSize: [1024, 768]
+    			},
+    			src: [
+    			'test/src/**/*.js'
+    			]
+    		},
+    		mobile: {
+    			options: {
+    				screenshots: 'test/src/screenshots/mobile/',
+    				results: 'test/results/mobile',
+    				viewportSize: [320, 480]
     			},
     			src: [
     			'test/src/**/*.js'
     			]
     		}
     	}
-
     });
 
 	// Build tasks.
@@ -650,6 +669,10 @@ module.exports = function(grunt) {
 		'clean:everything',
 		'build_dev',
 		'watch'
+		]);
+	// Test
+	grunt.registerTask('test', [
+		'phantomcss'
 		]);
 	// Local server
 	grunt.registerTask('server', [
