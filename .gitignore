@@ -1,16 +1,6 @@
-# debugging
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-*.yo-rc.json
-pids
-logs
+# Test
 results
+logs
 
 # OS
 .DS_Store
@@ -30,3 +20,14 @@ node_modules
 # generated components
 dist
 src/assets/styles/less/_mixins/_combined.less
+
+# debugging
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids

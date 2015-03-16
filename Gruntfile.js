@@ -584,8 +584,24 @@ module.exports = function(grunt) {
 					packageJson: './package.json'
 				}
 			}
-		}
-	});
+		},
+
+	    // Test tasks
+    	// @todo get test package install working on build server
+    	phantomcss: {
+    		options: {},
+    		desktop: {
+    			options: {
+    				screenshots: 'test/src/screenshots/',
+    				results: 'test/results/visual/'
+    			},
+    			src: [
+    			'test/src/**/*.js'
+    			]
+    		}
+    	}
+
+    });
 
 	// Build tasks.
 	grunt.registerTask('build_html', [

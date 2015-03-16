@@ -40,6 +40,7 @@
     "grunt-dev-update": "^1.0.1",
     "grunt-jscs": "^1.2.0",
     "grunt-modernizr": "^0.6.0",
+    "grunt-phantomcss-working-version": "^0.2.3",
     "grunt-preen": "^1.1.0",
     "grunt-prettify": "^0.4.0",
     "grunt-px-to-rem": "^0.3.2",
@@ -48,6 +49,7 @@
     "grunt-zip": "^0.16.2",
     "jshint-stylish": "^1.0.0",
     "load-grunt-tasks": "^3.0.0",
+    "phantomjs": "^1.9.16",
     "time-grunt": "^1.0.0"
   },
   "licenses": [
